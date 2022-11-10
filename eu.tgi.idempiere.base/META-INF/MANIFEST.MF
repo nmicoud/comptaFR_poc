@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Compta FR base
+Bundle-SymbolicName: eu.tgi.idempiere.base;singleton:=true
+Bundle-Version: 9.0.0.qualifier
+Bundle-ClassPath: .
+Automatic-Module-Name: eu.tgi.idempiere.base
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: org.tgi.factories,
+ org.tgi.model,
+ org.tgi.process
+Require-Bundle: org.adempiere.base;bundle-version="10.0.0",
+ org.adempiere.plugin.utils;bundle-version="10.0.0"
+Bundle-ActivationPolicy: lazy
+Service-Component: OSGI-INF/*.xml
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version>=11))"
+Bundle-Activator: org.adempiere.plugin.utils.Incremental2PackActivator
